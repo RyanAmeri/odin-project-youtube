@@ -1,6 +1,8 @@
 html {
     /* border-box box model allows us to add padding and border to our elements without increasing their size */
     box-sizing: border-box;
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
   }
   *,
   *:before,
@@ -31,7 +33,21 @@ html {
       background: rgba(255, 255, 255, 0.1);
       grid-template-columns: 50px 100px 1fr repeat(4, 50px);
       place-items: center center;
+      color: #AAAAAA
   }
+  .logo {
+      display: grid;
+      grid-template-columns: 2fr 4fr 1fr;
+      place-items: center center;
+      font-size: 1.4rem;
+      grid-gap: 5px;
+  }
+  .logo .country {
+      font-size: 0.8rem;
+      align-self: start;
+      justify-self: end;
+  }
+
   .content {
       grid-area: content;
   }
@@ -60,4 +76,8 @@ html {
   .icon-menu {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.9);
+  }
+  .icon-youtube {
+      font-size: 24px;
+      color: red;
   }
