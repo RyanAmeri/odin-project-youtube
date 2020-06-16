@@ -7,3 +7,57 @@ html {
   *:after {
     box-sizing: inherit;
   }
+
+  body {
+      background: #181818;
+      padding: 20px;
+  }
+
+  .container{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(160px,1fr));
+      grid-template-areas: 
+      "header   header  header"
+      "content  content sidebar"
+      "info     info    sidebar"
+      "desc     desc    sidebar"
+      "comments comments    sidebar"
+      ;
+  }
+  .header {
+      grid-area: header;
+      display: grid;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      grid-template-columns: 50px 100px 1fr repeat(4, 50px);
+      place-items: center center;
+  }
+  .content {
+      grid-area: content;
+  }
+  .sidebar{
+      grid-area: sidebar;
+  }
+  .info {
+      grid-area: info;
+  }
+  .desc {
+      grid-area: desc;
+  }
+  .comments{
+      grid-area: comments;
+  }
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+  
+  
+  .icon-menu {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+  }
