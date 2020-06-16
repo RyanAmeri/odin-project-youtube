@@ -12,7 +12,9 @@ html {
 
   body {
       background: #181818;
-      padding: 20px;
+      padding: 0;
+      min-width: 360px;
+      overflow: hidden;
   }
 
   .container{
@@ -31,22 +33,63 @@ html {
       display: grid;
       height: 50px;
       background: rgba(255, 255, 255, 0.1);
-      grid-template-columns: 50px 100px 1fr repeat(4, 50px);
+      grid-template-columns: minmax(40px,60px) 120px 1fr repeat(4, minmax(40px,60px));
       place-items: center center;
-      color: #AAAAAA
+      
   }
   .logo {
       display: grid;
       grid-template-columns: 2fr 4fr 1fr;
       place-items: center center;
       font-size: 1.4rem;
-      grid-gap: 5px;
+      grid-gap: 2px;
+      color: white;
+      font-stretch: expanded;
   }
   .logo .country {
       font-size: 0.8rem;
       align-self: start;
       justify-self: end;
+      color: #AAAAAA
   }
+  .search {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr minmax(100px, 565px) 65px 1fr;
+
+  }
+  .searchbox {
+      display: grid;
+      place-items: center center;
+      
+      
+  }
+  #searchbox {
+      background: black;
+      height: 26px;
+      border: none;
+      width: 100%;
+      color: #AAAAAA;
+      font-weight: 400;
+      font-size: 1.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px;
+  }
+ 
+  #searchbutton {
+      font-size: 16px;
+      background: transparent;
+      border: none;
+      padding-left: 30px;
+      padding-top: 6px;
+  }
+
+  #searchbutton svg {
+    width: 20px;
+    height: 20px;
+    color: white; 
+  } 
 
   .content {
       grid-area: content;
@@ -70,14 +113,10 @@ html {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-  }
-  
-  
-  .icon-menu {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.9);
   }
+
   .icon-youtube {
-      font-size: 24px;
       color: red;
   }
