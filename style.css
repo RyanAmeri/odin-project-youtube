@@ -19,7 +19,7 @@ html {
       background: #181818;
       padding: 0;
       min-width: 360px;
-      overflow: hidden;
+      /* overflow: hidden; */
   }
 
   .container{
@@ -102,6 +102,7 @@ html {
       grid-template-columns: 1fr;
       place-items: center center;
       padding: 20px;
+      padding-top: 0;
   }
 
   .videowrapper {
@@ -125,6 +126,7 @@ html {
       display: grid;
       padding-top: 20px;
       grid-template-columns: minmax(300px, 1fr);
+      
       grid-template-rows: 22px;
       grid-auto-rows: 114px;;
   }
@@ -140,6 +142,8 @@ html {
   .autoplay {
       justify-self: end;
       color: var(--second-color);
+      font-size: 1.4rem;
+      align-self: center;
   }
   /* the switch */
   .switch {
@@ -200,6 +204,45 @@ html {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .sidecell {
+      color: var(--main-color);
+      padding-top: 50px;
+      display: grid;
+      grid-template-columns: 168px 1fr;
+      grid-gap: 10px;
+  }
+  .sidetext {
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+  .sideinfo {
+    margin: 0;
+    padding: 0;
+    max-height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+  }
+  .artist {
+      font-size: 1.2rem;
+      color: var(--second-color);
+      padding-top: 5px;
+      font-weight: 400;
+  }
+  .recommend {
+      padding-bottom: 15px;
+      font-size: 1.2rem;
+      color: var(--second-color);
+      font-weight: 400;
+  }
+  hr {
+      color: var(--second-color);
   }
 
   .info {
