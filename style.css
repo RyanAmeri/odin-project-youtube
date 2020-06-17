@@ -10,6 +10,11 @@ html {
     box-sizing: inherit;
   }
 
+  :root {
+    --main-color:#fff;
+    --second-color: #AAAAAA;
+  }
+
   body {
       background: #181818;
       padding: 0;
@@ -19,7 +24,7 @@ html {
 
   .container{
       display: grid;
-      grid-template-columns: repeat(3, minmax(160px,1fr));
+      grid-template-columns: repeat(2, minmax(160px,1fr)) minmax(300px, 402px);
       grid-template-areas: 
       "header   header  header"
       "content  content sidebar"
@@ -43,14 +48,14 @@ html {
       place-items: center center;
       font-size: 1.4rem;
       grid-gap: 2px;
-      color: white;
+      color: var(--main-color);
       font-stretch: expanded;
   }
   .logo .country {
       font-size: 0.8rem;
       align-self: start;
       justify-self: end;
-      color: #AAAAAA
+      color: var(--second-color);
   }
   .search {
       display: grid;
@@ -70,7 +75,7 @@ html {
       height: 26px;
       border: none;
       width: 100%;
-      color: #AAAAAA;
+      color: var(--second-color);
       font-weight: 400;
       font-size: 1.4rem;
       border: 1px solid rgba(255, 255, 255, 0.3);
@@ -88,7 +93,7 @@ html {
   #searchbutton svg {
     width: 20px;
     height: 20px;
-    color: white; 
+    color: var(--main-color); 
   } 
 
   .content {
@@ -117,7 +122,86 @@ html {
   
   .sidebar{
       grid-area: sidebar;
+      display: grid;
+      padding-top: 20px;
+      grid-template-columns: minmax(300px, 1fr);
+      grid-template-rows: 22px;
+      grid-auto-rows: 114px;;
   }
+  .control {
+      font-size: 1.6rem;
+      font-weight: 400;
+      background: transparent;
+      color: var(--main-color);
+      padding-top: 5px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .autoplay {
+      justify-self: end;
+      color: var(--second-color);
+  }
+  /* the switch */
+  .switch {
+    align-self: center;
+    justify-self: start;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 12px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255,255, 0.3);
+    transition: .2s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    bottom: -3px;
+    background-color: var(--second-color);
+    transition: .2s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 17px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
   .info {
       grid-area: info;
   }
