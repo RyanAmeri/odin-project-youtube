@@ -22,7 +22,7 @@ html {
       /* overflow: hidden; */
   }
 
-  .container{
+  .container {
       display: grid;
       grid-template-columns: repeat(2, minmax(160px,1fr)) minmax(300px, 402px);
       grid-template-areas: 
@@ -33,6 +33,7 @@ html {
       "comments comments    sidebar"
       ;
   }
+
   .header {
       grid-area: header;
       display: grid;
@@ -505,3 +506,18 @@ html {
 #user1004{
     color: lightcyan;
 }
+@media (max-width: 950px) {
+    .container {
+      grid-template-areas:
+      "header   header header"
+      "content  content content"
+      "info     info info"
+      "desc     desc desc"
+      "sidebar sidebar sidebar"
+      "comments comments comments"
+      ;
+    }
+    .sidebar{
+        padding-left: 20px;
+    }
+  }
