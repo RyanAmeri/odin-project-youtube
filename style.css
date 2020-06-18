@@ -295,34 +295,81 @@ html {
       padding-left: 20px;
       grid-area: desc;
       display: grid;
+      grid-gap: 10px;
       grid-template-columns: 50px 1fr 72px 114px 40px;
       grid-template-rows: 66px 60px 40px;
       grid-template-areas: 
       "avatar name join subscribe bell"
-      "avatar description description description description"
+      "avatar description description . ."
       "avatar showmore . . ."
       ;
+      align-content: start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1  )
   }
   .avatar {
       grid-area: avatar;
   }
   .name {
       grid-area: name;
+      align-self: center
+  }
+  .artname {
+      line-height: 2rem;
+      color: var(--main-color);
+      font-size: 1.4rem;
+      font-weight: 500;
+  }
+  .subcount {
+      color: var(--second-color);
+      font-weight: 1.4rem;
   }
   .join {
       grid-area: join;
+      place-self: center start;
   }
   .subscribe {
       grid-area: subscribe;
+      place-self: center center;
+  }
+  .joinBtn {
+    background-color: transparent;
+    border: 1px solid #2196F3;
+    color: #2196F3;
+    padding: 10px 15px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+  }
+  .subscribeBtn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--second-color);
+    padding: 10px 15px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
   }
   .bell {
       grid-area: bell;
+      place-self: center center;
+      padding-right: 10px;
+  }
+  #bellTwo {
+      font-size: 2rem;
+      color: var(--second-color);
   }
   .description {
       grid-area: description;
+      color: var(--main-color);
+      font-size: 1.4rem;
+      font-weight: 500;
   }
   .showmore {
       grid-area: showmore;
+      color: var(--second-color);
+      font-size: 1.4rem;
   }
 
   .comments{
