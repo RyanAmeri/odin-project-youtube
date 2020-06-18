@@ -12,5 +12,6 @@ Further infornation can be found at [The Odin Project](https://www.theodinprojec
 ## Further Improvements
 * I embeded the SVG definitions and paths directly in the HTML to allow me to style them from CSS. For a small page such as this this method would work but ideally I should store the SVG files separately and use the <object> tag to bring them into the HTML file. That would also result in cleaer HTML layout. 
 * Various functionality was left unimplemented because they took too much time and I had to draw the line somewhere!
+* I tried to make it responsive, and it's not too bad but it's not fully responsive. I need to put more time in to make it perfect on phones. 
 ## Reflections
 * I hate this way of writing CSS. I can see the value of something like tailwind or styled components. These classes are meaningless and it essentially becomes inline styles anyway
