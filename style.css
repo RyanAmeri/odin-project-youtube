@@ -309,6 +309,12 @@ html {
   .avatar {
       grid-area: avatar;
   }
+  .creator {
+      padding-top: 20px;
+  }
+  .useravatar {
+      padding-top: 10px;
+  }
   .name {
       grid-area: name;
       align-self: center
@@ -365,6 +371,8 @@ html {
       color: var(--main-color);
       font-size: 1.4rem;
       font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
   .showmore {
       grid-area: showmore;
@@ -373,9 +381,72 @@ html {
   }
 
   .comments{
+      padding-top: 20px;
+      padding-right: 20px;
       grid-area: comments;
-      
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      grid-auto-columns: 50px 1fr;
+      grid-row-gap: 20px;
   }
+  .comcount {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--main-color);
+
+  }
+  .sort {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      grid-gap: 10px;
+  }
+  .sorttxt {
+      color: var(--second-color);
+      font-size: 1.4rem;
+      padding-top: 3px;
+  }
+ #commentbox {
+    background: black;
+    height: 26px;
+    border: none;
+    width: 100%;
+    color: var(--second-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+}
+
+.comshow {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    grid-template-areas: 
+    "username   days"
+    "comtext    comtext"
+    "comtext    comtext"
+    "comtext    comtext"
+    ;
+}
+.username {
+    grid-area: username;
+    color: var(--main-color);
+    font-size: 1.4rem;
+}
+.days {
+    grid-area: days;
+    color: var(--second-color);
+    justify-self: start;
+    font-size: 1.2rem;
+}
+.comtext {
+    grid-area: comtext;
+    color: var(--main-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
   .icon {
     display: inline-block;
     width: 1em;
@@ -411,4 +482,26 @@ html {
 .icon-user-circle-o {
     color: var(--second-color);
     font-size: 5rem;
+}
+.icon-sort {
+    color: var(--second-color);
+    font-size: 2.4rem;
+}
+#user999{
+    color: fuchsia;
+}
+#user1000{
+    color: blue;
+}
+#user1001{
+    color: red;
+}
+#user1002{
+    color:yellow;
+}
+#user1003{
+    color: pink;
+}
+#user1004{
+    color: lightcyan;
 }
