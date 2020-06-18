@@ -292,10 +292,42 @@ html {
       padding-top: 6px;
   }
   .desc {
+      padding-left: 20px;
       grid-area: desc;
+      display: grid;
+      grid-template-columns: 50px 1fr 72px 114px 40px;
+      grid-template-rows: 66px 60px 40px;
+      grid-template-areas: 
+      "avatar name join subscribe bell"
+      "avatar description description description description"
+      "avatar showmore . . ."
+      ;
   }
+  .avatar {
+      grid-area: avatar;
+  }
+  .name {
+      grid-area: name;
+  }
+  .join {
+      grid-area: join;
+  }
+  .subscribe {
+      grid-area: subscribe;
+  }
+  .bell {
+      grid-area: bell;
+  }
+  .description {
+      grid-area: description;
+  }
+  .showmore {
+      grid-area: showmore;
+  }
+
   .comments{
       grid-area: comments;
+      
   }
   .icon {
     display: inline-block;
@@ -327,4 +359,9 @@ html {
 }
 .icon-more-horizontal {
     color: var(--second-color);
+    padding-top: 5px;
+}
+.icon-user-circle-o {
+    color: var(--second-color);
+    font-size: 5rem;
 }
