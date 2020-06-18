@@ -98,15 +98,21 @@ html {
 
   .content {
       grid-area: content;
-      display: grid;
-      grid-template-columns: 1fr;
-      place-items: end center;
+      display: flex;
+      width: 100%; 
+      height: 100%; 
+      flex-direction: column; 
+      overflow: hidden;
       padding: 20px;
-      padding-top: 0px;
-      padding-bottom: 0;
+      /* padding-top: 0px;
+      padding-bottom: 0; */
   }
 
   .videowrapper {
+    flex-grow: 1; 
+    border: none; 
+    margin: 0; 
+    padding: 0;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -114,6 +120,9 @@ html {
   } 
   .wrapperchild {
     position: absolute;
+    border: none; 
+    margin: 0; 
+    padding: 0;
     top: 0;
     left: 0;
     bottom: 0;
